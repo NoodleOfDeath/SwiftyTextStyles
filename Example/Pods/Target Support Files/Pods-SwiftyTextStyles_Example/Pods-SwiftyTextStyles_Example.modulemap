@@ -1,0 +1,6 @@
+framework module Pods_SwiftyTextStyles_Example {
+  umbrella header "Pods-SwiftyTextStyles_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

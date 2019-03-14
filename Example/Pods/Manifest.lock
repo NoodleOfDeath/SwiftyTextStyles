@@ -1,0 +1,16 @@
+PODS:
+  - SwiftyTextStyles (1.0.0)
+
+DEPENDENCIES:
+  - SwiftyTextStyles (from `../`)
+
+EXTERNAL SOURCES:
+  SwiftyTextStyles:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SwiftyTextStyles: 0fca2a15ae68f047e894560eb9c3fc1d779d1e5c
+
+PODFILE CHECKSUM: df70d4744ee8aa2ba1270f0e8a3339ffbde35ba0
+
+COCOAPODS: 1.5.3
