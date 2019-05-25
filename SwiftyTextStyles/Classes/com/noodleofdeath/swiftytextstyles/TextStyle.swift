@@ -197,9 +197,9 @@ extension UIColor: JSONCodable {
         if let object = object as? DecodableType { return object }
         if let hex = object as? UInt {
             return UIColor(hex)
-        } else if let dict = object as? TextStyle,
-            let hex = dict[.foregroundColor] as? UInt {
-            return UIColor(hex, alpha: dict[.alpha] as? CGFloat)
+        } else if let dict = object as? [String: Any],
+            let hex = dict[NSAttributedStringKey.foregroundColor] as? UInt {
+            return UIColor(hex, alpha: dict[NSAttributedStringKey.alpha] as? CGFloat)
         }
         return nil
     }
@@ -222,9 +222,9 @@ extension UIFont: JSONCodable {
         if let fontName = object as? String {
             return UIFont(name: fontName, size: UIFont.systemFontSize)
         } else if
-            let dict = object as? SwiftyTextStyles.TextStyle,
-            let fontName = dict[.font] as? String,
-            let pointSize = dict[.pointSize] as? CGFloat {
+            let dict = object as? [String: Any],
+            let fontName = dict[NSAttributedStringKey.font] as? String,
+            let pointSize = dict[NSAttributedStringKey.pointSize] as? CGFloat {
             return UIFont(name: fontName, size: pointSize)
         }
         return nil
